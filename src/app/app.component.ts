@@ -1,10 +1,22 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+    selector: 'app-root',
+    template:`
+        <ngx-advanced-rating-stars [ratings]="ratings" [style]="ratingStyle" [showRatingInNumericFormat]="true" [percentageBarColor]="barColor"></ngx-advanced-rating-stars>
+    `,
+    styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'ngx-advanced-rating-stars-demo';
+
+    ratings = [5, 5, 5, 5, 5, 4, 4, 4, 3, 2, 1, 1, 2]
+    
+    ratingStyle = {
+        starsStyle: {'height' : '22px', 'width' : '22px'},
+        ratingStyle: {'font-size' : '18px'},
+        countStyle: {'font-size' : '14px'}
+    }
+    
+    barColor:string = "rgb(45, 140, 200)" // or the name of the color
+
 }
