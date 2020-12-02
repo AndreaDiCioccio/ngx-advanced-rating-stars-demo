@@ -3,7 +3,13 @@ import { Component } from '@angular/core';
 @Component({
     selector: 'app-root',
     template:`
-        <ngx-advanced-rating-stars [ratings]="ratings" [style]="ratingStyle" [showRatingInNumericFormat]="true" [percentageBarColor]="barColor"></ngx-advanced-rating-stars>
+        <ngx-advanced-rating-stars 
+            [ratings]="ratings" 
+            [style]="ratingStyle" 
+            [showRatingInNumericFormat]="true" 
+            [percentageBarColor]="barColor">
+        </ngx-advanced-rating-stars>
+        <p>Hover the arrow on the stars!</p>
     `,
     styleUrls: ['./app.component.css']
 })
